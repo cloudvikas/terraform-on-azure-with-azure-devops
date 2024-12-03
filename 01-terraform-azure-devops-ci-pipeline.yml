@@ -2,9 +2,9 @@ trigger:
 - main
 
 pool:
-    name: Default
-    demands:
-     - agent.name -equals basevm
+  name: Default
+  demands:
+   - agent.name -equals basevm
 
 # Stages
 # Stage-1:
