@@ -20,7 +20,9 @@ stages:
   - job: Build
     displayName: Build Job
     pool:
-      vmImage: 'ubuntu-latest'
+      name: Default
+      demands:
+       - agent.name -equals basevm
     steps: 
 ## Publish Artifacts pipeline code in addition to Build and Push          
     - bash: echo Contents in System Default Working Directory; ls -R $(System.DefaultWorkingDirectory)        
